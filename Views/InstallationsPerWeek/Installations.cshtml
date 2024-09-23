@@ -1,0 +1,456 @@
+@{
+  ViewData["Title"] = "Basic Tables - Tables";
+}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Schedule</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .day-header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+
+    .date-header {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .day-container {
+      border: 1px solid #dee2e6;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      height: 100%;
+    }
+
+    h6 {
+      font-size: 1rem;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Monday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">MONDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <form>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Customer:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Contract Number:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Address:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Status:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Phone:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Sales Rep:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <!-- System Details -->
+            <h6>System Details</h6>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>System Size (kW):</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Number of Panels:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Panel Wattage:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Inverter Model:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Inverter Phases:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Roof Type:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <h6>Additional Info</h6>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Levels:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>MP/SB Upgrade:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Deposit:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Balance:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Distributor:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>NMI:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Meter:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Preapproval No.:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <!-- Technician Details -->
+            <h6>Technicians</h6>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Technician 1:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label>Technician 2:</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label>Installation Status:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <label>Notes:</label>
+                <textarea class="form-control" rows="2"></textarea>
+              </div>
+            </div>
+          </form>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tuesday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">TUESDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Customer:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Contract Number:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <!-- More fields as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Wednesday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">WEDNESDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Customer:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Contract Number:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <!-- More fields as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Thursday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">THURSDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Customer:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Contract Number:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <!-- More fields as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Friday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">FRIDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Customer:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Contract Number:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <!-- More fields as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Saturday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">SATURDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <form>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Customer:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Contract Number:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Address:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Status:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Phone:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Sales Rep:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <!-- System Details -->
+              <h6>System Details</h6>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>System Size (kW):</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Number of Panels:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Panel Wattage:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Inverter Model:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Inverter Phases:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Roof Type:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <!-- Additional Info -->
+              <h6>Additional Info</h6>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Levels:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>MP/SB Upgrade:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Deposit:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Balance:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Distributor:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>NMI:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Meter:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Preapproval No.:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <!-- Technician Details -->
+              <h6>Technicians</h6>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Technician 1:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label>Technician 2:</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label>Installation Status:</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-12">
+                  <label>Notes:</label>
+                  <textarea class="form-control" rows="2"></textarea>
+                </div>
+              </div>
+            </form>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sunday -->
+    <div class="col">
+      <div class="day-container">
+        <div class="day-header">SUNDAY</div>
+        <div class="date-header">Date: <input type="date" class="form-control"></div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Customer:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Contract Number:</td>
+              <td><input type="text" class="form-control"></td>
+            </tr>
+            <!-- More fields as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (optional for Bootstrap JavaScript) -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<!-- Bootstrap JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->

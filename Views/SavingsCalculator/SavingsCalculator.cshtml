@@ -1,0 +1,86 @@
+@{
+  ViewData["Title"] = "Basic Tables - Tables";
+}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity and Solar Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    function calculateTotal() {
+      var electricity1 = parseFloat(document.getElementById("electricity1").value) || 0;
+      var electricity2 = parseFloat(document.getElementById("electricity2").value) || 0;
+      var total = electricity1 + electricity2;
+      document.getElementById("total").value = total;
+    }
+  </script>
+</head>
+
+<div class="container mt-5">
+  <h1 class="mb-4">Electricity and Solar Data Input</h1>
+
+  <!-- Electricity Section -->
+  <div class="form-group row">
+    <label for="electricity1" class="col-sm-4 col-form-label">Electricity Used in kWh (1):</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" id="electricity1" placeholder="Enter kWh" oninput="calculateTotal()">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="electricity2" class="col-sm-4 col-form-label">Electricity Used in kWh (2):</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" id="electricity2" placeholder="Enter kWh" oninput="calculateTotal()">
+    </div>
+  </div>
+
+  <!-- Total Calculation  ddddddddddddddddddddd -->
+  <div class="form-group row">
+    <label for="total" class="col-sm-4 col-form-label">Total Electricity Used (kWh):</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" id="total" placeholder="Total kWh" readonly>
+    </div>
+  </div>
+
+  <!-- Solar System Section -->
+  <div class="form-group row">
+    <label for="solarSystem" class="col-sm-4 col-form-label">Solar Generated System:</label>
+    <div class="col-sm-8">
+      <select class="form-control" id="solarSystem">
+        <option value="" disabled selected>Select a system</option>
+        <option value="system1">System 1</option>
+        <option value="system2">System 2</option>
+        <option value="system3">System 3</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Time Data Section -->
+  <div class="form-group row">
+    <label for="day" class="col-sm-4 col-form-label">Day Data:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="day" placeholder="Enter day data">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="month" class="col-sm-4 col-form-label">Month Data:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="month" placeholder="Enter month data">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="year" class="col-sm-4 col-form-label">Year Data:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="year" placeholder="Enter year data">
+    </div>
+  </div>
+
+  <!-- Savings Section -->
+  <div class="form-group row">
+    <label for="savings" class="col-sm-4 col-form-label">Savings from Bill:</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="savings" placeholder="Enter savings from bill">
+    </div>
+  </div>
+</div>

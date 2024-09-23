@@ -1,0 +1,297 @@
+
+@{
+  ViewData["Title"] = "Basic Tables - Tables";
+}
+
+
+<div class="container mt-5">
+  <h2 class="mb-4">Details Form</h2>
+  <div class="row">
+    <!-- Form Section (Left Column) -->
+    <div class="col-md-7">
+      <!-- Tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="personal-details-tab" data-bs-toggle="tab" data-bs-target="#personal-details" type="button" role="tab" aria-controls="personal-details" aria-selected="true">Personal Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="electricity-bill-details-tab" data-bs-toggle="tab" data-bs-target="#electricity-bill-details" type="button" role="tab" aria-controls="electricity-bill-details" aria-selected="false">Electricity Bill Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="house-details-tab" data-bs-toggle="tab" data-bs-target="#house-details" type="button" role="tab" aria-controls="house-details" aria-selected="false">House Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="client-list-tab" data-bs-toggle="tab" data-bs-target="#client-list" type="button" role="tab" aria-controls="client-list" aria-selected="false">Client List</button>
+        </li>
+
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="myTabContent">
+        <!-- Personal Details Tab -->
+        <div class="tab-pane fade show active p-4" id="personal-details" role="tabpanel" aria-labelledby="personal-details-tab">
+          <h4>Personal Details</h4>
+          <form id="registrationForm">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter first name" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter last name" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email address" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="postAddress" class="form-label">Postal Address</label>
+                <input type="text" class="form-control text-center" id="postAddress" placeholder="Enter postal address">
+              </div>
+              <div class="col-md-12">
+                <label for="installationAddress" class="form-label">Installation Address</label>
+                <input type="text" class="form-control text-center" id="installationAddress" placeholder="Enter installation address" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Enter company name" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="abnNum" class="form-label">ABN Number</label>
+                <input type="text" class="form-control" id="abnNum" placeholder="Enter ABN number" oninput="updatePreview()">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Electricity Bill Details Tab -->
+        <div class="tab-pane fade p-4" id="electricity-bill-details" role="tabpanel" aria-labelledby="electricity-bill-details-tab">
+          <h4>Electricity Bill Details</h4>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="meterNumber" class="form-label">Meter Number</label>
+                <input type="text" class="form-control" id="meterNumber" placeholder="Enter meter number" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="nmi" class="form-label">NMI</label>
+                <input type="text" class="form-control" id="nmi" placeholder="Enter NMI" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="electricityDis" class="form-label">Electricity Distributor</label>
+                <input type="text" class="form-control" id="electricityDis" placeholder="Enter electricity distributor" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="electricityRetailer" class="form-label">Electricity Retailer</label>
+                <input type="text" class="form-control" id="electricityRetailer" placeholder="Enter electricity retailer" oninput="updatePreview()">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="propertyPhase" class="form-label">Property Phase</label>
+                <input type="text" class="form-control" id="propertyPhase" placeholder="Enter property phase" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="preapprovalNumber" class="form-label">Preapproval Number</label>
+                <input type="text" class="form-control" id="preapprovalNumber" placeholder="Enter preapproval number" oninput="updatePreview()">
+
+              </div>
+            </div>
+            <div class="row mb-3">
+
+            </div>
+
+          </form>
+        </div>
+
+
+        <!-- House Details Tab -->
+        <div class="tab-pane fade p-4" id="house-details" role="tabpanel" aria-labelledby="house-details-tab">
+          <h4>House Details</h4>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="storyHouse" class="form-label">Story of House</label>
+                <input type="text" class="form-control" id="storyHouse" placeholder="Enter story of the house" oninput="updatePreview()">
+              </div>
+              <div class="col-md-6">
+                <label for="roofType" class="form-label">Roof Type</label>
+                <input type="text" class="form-control" id="roofType" placeholder="Enter roof type" oninput="updatePreview()">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="switchBoardUpgrade" class="form-label">Switch Board Upgrade</label>
+                <input type="text" class="form-control" id="switchBoardUpgrade" placeholder="Enter switch board upgrade status" oninput="updatePreview()">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+
+        <!-- Client Details Tab -->
+        <div class="tab-pane fade p-4" id="client-list" role="tabpanel" aria-labelledby="client-list-tab">
+          <h4>Client Details</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Email</th>
+                <th scope="col">Ins Add</th>
+                <th scope="col">Phase</th>
+                <th scope="col">Roof</th>
+
+                <!-- Side Form
+                                <th scope="col">Post A</th>
+                <th scope="col">Company</th>
+                <th scope="col">ABN</th>
+                <th scope="col">El.Ret.</th>
+                <th scope="col">PreAp<th>
+                <th scope="col">House</th>
+                <th scope="col">SB Upg</th>
+                <th scope="col">Meter</th>
+                <th scope="col">El.Dis.</th>
+
+                -->
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Preview Section (Right Column) -->
+    <div class="col-md-5">
+      <div class="preview-container">
+        <h4>Live Preview</h4>
+        <div id="previewContent">
+          <!-- Preview content will be loaded here -->
+          <p><strong>First Name:</strong> <span id="previewFirstName"></span></p>
+          <p><strong>Last Name:</strong> <span id="previewLastName"></span></p>
+          <p><strong>Mobile:</strong> <span id="previewMobile"></span></p>
+          <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+          <p><strong>Postal Address</strong> <span id="previewPostAddress"></span></p>
+          <p><strong>Installation Address</strong> <span id="previewInstallationAddress"></span></p>
+          <p><strong>Company Name</strong> <span id="previewCompanyName"></span></p>
+          <p><strong>ABN Number</strong> <span id="previewAbnNum"></span></p>
+          <hr>
+          <p><strong>Meter Number</strong> <span id="previewMeterNumber"></span></p>
+          <p><strong>NMI:</strong> <span id="previewNmi"></span></p>
+          <p><strong>Electricity Distributor</strong> <span id="previewElectricityDis"></span></p>
+          <p><strong>Electricity Retailer</strong> <span id="previewelEctricityRetailer"></span></p>
+          <p><strong>Property Phase</strong> <span id="previewPropertyPhase"></span></p>
+          <p><strong>Preapproval Number</strong> <span id="previewPreapprovalNumber"></span></p>
+          <hr>
+          <p><strong>Story of House:</strong> <span id="previewStoryHouse"></span></p>
+          <p><strong>Roof Type:</strong> <span id="previewRoofType"></span></p>
+          <p><strong>Switch Board Upgrade</strong> <span id="previewSwitchBoardUpgrade"></span></p>
+        </div>
+      </div>
+      <div class="mt-3">
+        <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+
+  document.querySelectorAll('.nav-link').forEach(tab => {
+    tab.addEventListener('click', function (event) {
+      const livePreviewSection = document.querySelector('.preview-container');
+      const submitButton = document.getElementById('submitButton');
+      console.log("Live preview" + livePreviewSection)
+      console.log("button" + submitButton)
+      if (event.target.id === 'client-list-tab') {
+        submitButton.style.display = "none !important";
+        livePreviewSection.style.display = 'none';
+
+
+        //  populateCientList();
+      } else {
+        livePreviewSection.style.display = 'block';
+
+      }
+    }
+    )
+  })
+
+  // JavaScript to update the live preview as the user fills in the form
+  function updatePreview() {
+    document.getElementById('previewFirstName').textContent = document.getElementById('firstName').value;
+    document.getElementById('previewLastName').textContent = document.getElementById('lastName').value;
+    document.getElementById('previewMobile').textContent = document.getElementById('mobile').value;
+    document.getElementById('previewEmail').textContent = document.getElementById('email').value;
+
+    document.getElementById('previewPostAddress').textContent = document.getElementById('postAddress').value;
+    document.getElementById('previewInstallationAddress').textContent = document.getElementById('installationAddress').value;
+    document.getElementById('previewCompanyName').textContent = document.getElementById('companyName').value;
+    document.getElementById('previewAbnNum').textContent = document.getElementById('abnNum').value;
+
+    document.getElementById('previewMeterNumber').textContent = document.getElementById('meterNumber').value;
+    document.getElementById('previewNmi').textContent = document.getElementById('nmi').value;
+    document.getElementById('previewElectricityDis').textContent = document.getElementById('electricityDis').value;
+    document.getElementById('previewelEctricityRetailer').textContent = document.getElementById('electricityRetailer').value;
+    document.getElementById('previewPropertyPhase').textContent = document.getElementById('propertyPhase').value;
+    document.getElementById('previewPreapprovalNumber').textContent = document.getElementById('preapprovalNumber').value;
+
+    document.getElementById('previewStoryHouse').textContent = document.getElementById('storyHouse').value;
+    document.getElementById('previewRoofType').textContent = document.getElementById('roofType').value;
+    document.getElementById('previewNmiHouse').textContent = document.getElementById('nmiHouse').value;
+    document.getElementById('previewMeterNumberHouse').textContent = document.getElementById('meterNumberHouse').value;
+    document.getElementById('previewPhaseHouse').textContent = document.getElementById('phaseHouse').value;
+    document.getElementById('previewSwitchBoardUpgrade').textContent = document.getElementById('boardUpgrade').value;
+  }
+
+  /*
+  // Navigation through tabs
+  document.getElementById('nextToElectricityBill').addEventListener('click', function() {
+      var tab = new bootstrap.Tab(document.querySelector('#electricity-bill-details-tab'));
+      tab.show();
+  });
+  */
+</script>
