@@ -1,6 +1,65 @@
 @{
-  ViewData["Title"] = "Basic Tables - Tables";
+	ViewData["Title"] = "Basic Tables - Tables";
 }
 
 
+@model IEnumerable<AspnetCoreMvcFull.Models.QuoteEntry>
+
 <h4>Solar Quote</h4>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">First</th>
+			<th scope="col">Last</th>
+			<th scope="col">Mobile</th>
+			<th scope="col">Email</th>
+			<th scope="col">Addres</th>
+			<th scope="col">Phase</th>
+			<th scope="col">Roof</th>
+			<th scope="col">Company</th>
+			<th scope="col">ABN</th>
+			<th scope="col">El.Ret.</th>
+			<th scope="col">Distr</th>
+			<th scope="col">PreAp</th>
+			<th scope="col">Meter</th>
+			<th scope="col">Story</th>
+			<th scope="col">SBoard</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var QuoteEntry in Model)
+		{
+			<tr>
+				<th scope="row">1</th>
+				<td>@QuoteEntry.NameFirst</td>
+				<td>@QuoteEntry.NameLast</td>
+				<td>@QuoteEntry.Mobile</td>
+				<td>@QuoteEntry.Email</td>
+				<td>@QuoteEntry.installationAddress</td>
+				<td>@QuoteEntry.propertyPhase</td>
+				<td>@QuoteEntry.roofType</td>
+				<td>@QuoteEntry.companyName</td>
+				<td>@QuoteEntry.ABNnumber</td>
+				<td>@QuoteEntry.electricityRetailer</td>
+				<td>@QuoteEntry.electricityDis</td>
+				<td>@QuoteEntry.preapprovalNumber</td>
+				<td>@QuoteEntry.meterNumber</td>
+				<td>@QuoteEntry.storyHouse</td>
+				<td>@QuoteEntry.switchBoardUpgrade</td>
+
+				<a class="btn btn-primary" asp-controller="QuoteEntry" asp-action="Edit" asp-route-id="">Edit</a>
+			</tr>
+<!--
+			<tr>
+				<th scope="row">2</th>
+				<td>//QuoteEntry.NameLast</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>//QuoteEntry.Email</td>
+			</tr>
+						-->
+		}
+	</tbody>
+</table>
