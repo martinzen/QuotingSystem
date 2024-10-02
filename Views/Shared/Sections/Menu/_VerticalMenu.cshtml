@@ -35,7 +35,7 @@
   </li>
 
   <!-- Quote Entry -->
-  <li class='menu-item active'>
+		<li class='menu-item@(currentPage.EndsWith("/Quote") || currentPage.StartsWith("/QuoteEntry/") ? " active open" : "")'>
     <a asp-controller="QuoteEntry" asp-action="Quote" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Quote Entry</div>
@@ -43,7 +43,7 @@
   </li>
 
   <!-- Stock -->
-  <li class='menu-item '>
+		<li class='menu-item@(currentPage.EndsWith("/Stock") || currentPage.StartsWith("/StockEntry/") ? " active open" : "")'>
     <a asp-controller="StockEntry" asp-action="Stock" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Stock</div>
@@ -51,7 +51,7 @@
   </li>
 
   <!-- Solar Quote -->
-  <li class=menu-item>
+		<li class='menu-item@(currentPage.EndsWith("/SolarQuote") || currentPage.StartsWith("/SolarQuote/") ? " active open" : "")'>
     <a asp-controller="SolarQuote" asp-action="SolarQuote" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Solar Quote</div>
@@ -60,8 +60,8 @@
 
 
   <!-- Savings Calculator -->
-  <li class=menu-item>
-    <a asp-controller="SavingsCalculator" asp-action="SavingsCalculator" class="menu-link">
+		<li class='menu-item@(currentPage.EndsWith("/SavingsCal") || currentPage.StartsWith("/SavingsCalculator/") ? " active open" : "")'>
+			<a asp-controller="SavingsCalculator" asp-action="SavingsCal" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Savings Calculator </div>
     </a>
@@ -69,7 +69,7 @@
 
 
   <!-- Installation per week calendar -->
-  <li class=menu-item>
+		<li class='menu-item@(currentPage.EndsWith("/Installations") || currentPage.StartsWith("/InstallationsPerWeek/") ? " active open" : "")'>
     <a asp-controller="InstallationsPerWeek" asp-action="Installations" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Installations per week </div>
@@ -77,14 +77,14 @@
   </li>
 
   <!-- Sales -->
-  <li class=menu-item>
+		<li class='menu-item@(currentPage.EndsWith("/Sale") || currentPage.StartsWith("/Sales/") ? " active open" : "")'>
     <a asp-controller="Sales" asp-action="Sale" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Sales</div>
     </a>
   </li>
   <!-- Finance -->
-  <li class=menu-item>
+		<li class='menu-item@(currentPage.EndsWith("/Finance") || currentPage.StartsWith("/Finances/") ? " active open" : "")'>
     <a asp-controller="Finances" asp-action="Finance" class="menu-link">
       <i class="menu-icon tf-icons bx bx-layout"></i>
       <div>Finance</div>
@@ -276,12 +276,7 @@
   </li>
     -->
   <!-- Tables -->
-  <li class='menu-item@(currentPage == "/Tables/Basic" ? " active" : "")'>
-    <a asp-controller="Tables" asp-action="Basic" class="menu-link">
-      <i class="menu-icon tf-icons bx bx-table"></i>
-      <div>Tables</div>
-    </a>
-  </li>
+
 
 
 

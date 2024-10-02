@@ -47,10 +47,12 @@
 				<td>@QuoteEntry.meterNumber</td>
 				<td>@QuoteEntry.storyHouse</td>
 				<td>@QuoteEntry.switchBoardUpgrade</td>
+				<td>	<a class="btn btn-primary" asp-controller="QuoteEntry" asp-action="Edit" asp-route-id="@QuoteEntry.Id">Edit</a></td>
+				<td>	<a class="btn btn-primary" asp-controller="QuoteEntry" asp-action="QuotePDF" asp-route-id="@QuoteEntry.Id">Quote</a></td>
 
-				<a class="btn btn-primary" asp-controller="QuoteEntry" asp-action="Edit" asp-route-id="">Edit</a>
 			</tr>
-<!--
+			
+			<!--	
 			<tr>
 				<th scope="row">2</th>
 				<td>//QuoteEntry.NameLast</td>
@@ -61,5 +63,7 @@
 			</tr>
 						-->
 		}
+
+	
 	</tbody>
 </table>

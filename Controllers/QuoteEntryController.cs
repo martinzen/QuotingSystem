@@ -56,6 +56,14 @@ public class QuoteEntryController : Controller
   }
 
   [HttpGet]
+  public async Task<IActionResult> QuotePDF(Guid id)
+  {
+    var QuoteEntity = await _context.QuoteEntries.FindAsync(id);
+
+    return View(QuoteEntity);
+  }
+
+  [HttpGet]
   public async Task<IActionResult> Edit(Guid id)
   {
     var QuoteEntity = await _context.QuoteEntries.FindAsync(id);
@@ -93,7 +101,7 @@ public class QuoteEntryController : Controller
     }
 
 
-    return View();
+    return RedirectToAction("SolarQuote", "SolarQuote");
 
   }
 
