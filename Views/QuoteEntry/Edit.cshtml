@@ -1,0 +1,125 @@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AspnetCoreMvcFull.Models.QuoteEntry
+
+<h1>Edit Client Details</h1>
+
+@if (Model is null)
+{
+
+<p>No data available, there is no ID</p>
+
+} else
+{
+	<form id="registrationForm" method="post">
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="firstName" class="form-label">First Name</label>
+				<input type="text" asp-for="NameFirst" class="form-control" id="firstName" placeholder="Enter first name" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="lastName" class="form-label">Last Name</label>
+				<input type="text" asp-for="NameLast" class="form-control" id="lastName" placeholder="Enter last name" oninput="updatePreview()">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="mobile" class="form-label">Mobile</label>
+				<input type="text" asp-for="Mobile" class="form-control" id="mobile" placeholder="Enter mobile number" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" asp-for="Email" class="form-control" id="email" placeholder="Enter email address" oninput="updatePreview()">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-12">
+				<label for="postAddress" class="form-label">Postal Address</label>
+				<input type="text" asp-for="postAddress" class="form-control text-center" id="postAddress" placeholder="Enter postal address">
+			</div>
+			<div class="col-md-12">
+				<label for="installationAddress" class="form-label">Installation Address</label>
+				<input type="text" asp-for="installationAddress" class="form-control text-center" id="installationAddress" placeholder="Enter installation address" oninput="updatePreview()">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="companyName" class="form-label">Company Name</label>
+				<input type="text" asp-for="companyName" class="form-control" id="companyName" placeholder="Enter company name" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="abnNum" class="form-label">ABN Number</label>
+				<input type="text" asp-for="ABNnumber" class="form-control" id="abnNum" placeholder="Enter ABN number" oninput="updatePreview()">
+			</div>
+		</div>
+
+
+		<!-- Electricity Bill Details Tab -->
+
+		<h4>Electricity Bill Details</h4>
+
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="meterNumber" class="form-label">Meter Number</label>
+				<input type="text" asp-for="meterNumber" class="form-control" id="meterNumber" placeholder="Enter meter number" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="nmi" class="form-label">NMI</label>
+				<input type="text" asp-for="NMI" class="form-control" id="nmi" placeholder="Enter NMI" oninput="updatePreview()">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="electricityDis" class="form-label">Electricity Distributor</label>
+				<input type="text" asp-for="electricityDis" class="form-control" id="electricityDis" placeholder="Enter electricity distributor" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="electricityRetailer" class="form-label">Electricity Retailer</label>
+				<input type="text" asp-for="electricityRetailer" class="form-control" id="electricityRetailer" placeholder="Enter electricity retailer" oninput="updatePreview()">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="propertyPhase" class="form-label">Property Phase</label>
+				<input type="text" asp-for="propertyPhase" class="form-control" id="propertyPhase" placeholder="Enter property phase" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="preapprovalNumber" class="form-label">Preapproval Number</label>
+				<input type="text" asp-for="preapprovalNumber" class="form-control" id="preapprovalNumber" placeholder="Enter preapproval number" oninput="updatePreview()">
+
+			</div>
+		</div>
+		<div class="row mb-3">
+		</div>
+
+
+
+
+		<!-- House Details Tab -->
+
+		<h4>House Details</h4>
+
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="storyHouse" class="form-label">Story of House</label>
+				<input type="text" asp-for="storyHouse" class="form-control" id="storyHouse" placeholder="Enter story of the house" oninput="updatePreview()">
+			</div>
+			<div class="col-md-6">
+				<label for="roofType" class="form-label">Roof Type</label>
+				<input type="text" asp-for="roofType" class="form-control" id="roofType" placeholder="Enter roof type" oninput="updatePreview()">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-6">
+				<label for="switchBoardUpgrade" class="form-label">Switch Board Upgrade</label>
+				<input type="text" asp-for="switchBoardUpgrade" class="form-control" id="switchBoardUpgrade" placeholder="Enter switch board upgrade status" oninput="updatePreview()">
+			</div>
+		</div>
+		<button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+	</form>
+	
+}

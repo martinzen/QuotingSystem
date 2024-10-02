@@ -6,5 +6,5 @@ namespace AspnetCoreMvcFull.Controllers;
 
 public class SavingsCalculatorController : Controller
 {
-  public IActionResult SavingsCalculator() => View();
+  public IActionResult SavingsCal() => View();
 }
